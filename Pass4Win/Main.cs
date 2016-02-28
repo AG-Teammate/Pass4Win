@@ -430,7 +430,7 @@ namespace Pass4Win
                 ShowHTML(txtPassDetail.Text);
                 File.Delete(this.tmpfile);
                 // copy to clipboard
-                if (txtPassDetail.Text != "")
+                if (txtPassDetail.Text != "" && !txtPassDetail.Text.StartsWith("\n"))
                 {
                     Clipboard.SetText(new string(txtPassDetail.Text.TakeWhile(c => c != '\n').ToArray()));
                     if (clear)

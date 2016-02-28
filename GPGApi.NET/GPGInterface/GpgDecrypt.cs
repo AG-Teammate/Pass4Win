@@ -235,13 +235,15 @@ namespace GpgApi
                 case GpgKeyword.NO_PUBKEY:
                     return new GpgInterfaceResult(GpgInterfaceStatus.Error, GpgInterfaceMessage.NoPublicKey, line);
 
-                case GpgKeyword.NO_SECKEY:
-                {
-                    if (_googPassphrase)
-                        return GpgInterfaceResult.Success;
-                    else
-                        return new GpgInterfaceResult(GpgInterfaceStatus.Error, GpgInterfaceMessage.NoSecretKey, line);
-                }
+                //andrew@teammate-exec.com
+                //GNUPG may return NO_SECKEY even if decryption succeeds. Commented out the following to ignore this keyword
+                //case GpgKeyword.NO_SECKEY:
+                //{
+                //    if (_googPassphrase)
+                //        return GpgInterfaceResult.Success;
+                //    else
+                //        return new GpgInterfaceResult(GpgInterfaceStatus.Error, GpgInterfaceMessage.NoSecretKey, line);
+                //}
 
                 case GpgKeyword.NODATA:
                 case GpgKeyword.UNEXPECTED:

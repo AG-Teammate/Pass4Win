@@ -61,6 +61,7 @@
             this.dirTreeView = new System.Windows.Forms.TreeView();
             this.listFileView = new System.Windows.Forms.ListBox();
             this.HTMLShowDetails = new System.Windows.Forms.WebBrowser();
+            this.toolStripBtnRestartGpg = new System.Windows.Forms.ToolStripButton();
             this.statusPass.SuspendLayout();
             this.passDetailMenu.SuspendLayout();
             this.dataMenu.SuspendLayout();
@@ -212,7 +213,8 @@
             this.toolStripbtnConfig,
             this.toolStripbtnKey,
             this.toolStripBtnGenPass,
-            this.toolStripUpdateButton});
+            this.toolStripUpdateButton,
+            this.toolStripBtnRestartGpg});
             this.toolStripSearch.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             resources.ApplyResources(this.toolStripSearch, "toolStripSearch");
             this.toolStripSearch.Name = "toolStripSearch";
@@ -307,6 +309,13 @@
             this.HTMLShowDetails.Name = "HTMLShowDetails";
             this.HTMLShowDetails.WebBrowserShortcutsEnabled = false;
             // 
+            // toolStripBtnRestartGpg
+            // 
+            this.toolStripBtnRestartGpg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBtnRestartGpg, "toolStripBtnRestartGpg");
+            this.toolStripBtnRestartGpg.Name = "toolStripBtnRestartGpg";
+            this.toolStripBtnRestartGpg.Click += new System.EventHandler(this.ToolStripbtnRestartGpgClick);
+            // 
             // FrmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -367,6 +376,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ListBox listFileView;
         private System.Windows.Forms.WebBrowser HTMLShowDetails;
+        private System.Windows.Forms.ToolStripButton toolStripBtnRestartGpg;
     }
 }
 

@@ -994,5 +994,15 @@ namespace Pass4Win
             txtPassDetail.Visible = false;
             HTMLShowDetails.Visible = false;
         }
+
+        private void ToolStripbtnRestartGpgClick(object sender, EventArgs e)
+        {
+            KillTimer();
+
+            ProcessStartInfo info = new ProcessStartInfo("taskkill.exe", "/f /im gpg-agent.exe");
+            info.UseShellExecute = true;
+            info.Verb = "runas";
+            Process.Start(info);
+        }
     }
 }

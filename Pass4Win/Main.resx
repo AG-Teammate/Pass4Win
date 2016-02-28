@@ -121,31 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="statusPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 290</value>
-  </data>
-  <data name="statusPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>686, 22</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="statusPass.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="statusPass.Text" xml:space="preserve">
-    <value>Ready</value>
-  </data>
-  <data name="&gt;&gt;statusPass.Name" xml:space="preserve">
-    <value>statusPass</value>
-  </data>
-  <data name="&gt;&gt;statusPass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusPass.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;statusPass.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="statusTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 17</value>
   </data>
@@ -155,6 +130,7 @@
   <data name="statusPB.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="statusPB.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -176,9 +152,39 @@
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
     <value>label</value>
   </data>
+  <data name="statusPass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 290</value>
+  </data>
+  <data name="statusPass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>686, 22</value>
+  </data>
+  <data name="statusPass.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="statusPass.Text" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="&gt;&gt;statusPass.Name" xml:space="preserve">
+    <value>statusPass</value>
+  </data>
+  <data name="&gt;&gt;statusPass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusPass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusPass.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <metadata name="passDetailMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1140, 17</value>
   </metadata>
+  <data name="copyPassDetailMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 22</value>
+  </data>
+  <data name="copyPassDetailMenuItem.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
   <data name="passDetailMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 26</value>
   </data>
@@ -215,24 +221,9 @@
   <data name="&gt;&gt;txtPassDetail.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="copyPassDetailMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 22</value>
-  </data>
-  <data name="copyPassDetailMenuItem.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
   <metadata name="dataMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>293, 17</value>
   </metadata>
-  <data name="dataMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 92</value>
-  </data>
-  <data name="&gt;&gt;dataMenu.Name" xml:space="preserve">
-    <value>dataMenu</value>
-  </data>
-  <data name="&gt;&gt;dataMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="copyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 22</value>
   </data>
@@ -256,6 +247,15 @@
   </data>
   <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="dataMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 92</value>
+  </data>
+  <data name="&gt;&gt;dataMenu.Name" xml:space="preserve">
+    <value>dataMenu</value>
+  </data>
+  <data name="&gt;&gt;dataMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnMakeVisible.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -294,6 +294,18 @@
   <metadata name="SystrayMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>772, 17</value>
   </metadata>
+  <data name="openSystrayMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="openSystrayMenuItem.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="quitSystrayMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="quitSystrayMenuItem.Text" xml:space="preserve">
+    <value>Quit</value>
+  </data>
   <data name="SystrayMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 48</value>
   </data>
@@ -6481,42 +6493,9 @@
   <data name="notifyIcon1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="openSystrayMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="openSystrayMenuItem.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="quitSystrayMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="quitSystrayMenuItem.Text" xml:space="preserve">
-    <value>Quit</value>
-  </data>
   <metadata name="toolStripSearch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>894, 17</value>
   </metadata>
-  <data name="toolStripSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="toolStripSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>686, 25</value>
-  </data>
-  <data name="toolStripSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;toolStripSearch.Name" xml:space="preserve">
-    <value>toolStripSearch</value>
-  </data>
-  <data name="&gt;&gt;toolStripSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toolStripSearch.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="toolStriptextSearch.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -6672,6 +6651,46 @@
   </data>
   <data name="toolStripUpdateButton.Text" xml:space="preserve">
     <value>Sync with Git</value>
+  </data>
+  <data name="toolStripBtnRestartGpg.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADiSURBVHhe7doxisNQEARR3dB4738Ary/h/TIsTFDQ2STV
+        BS9pMYEyBbpaa621pu7n+D0+Mu/jeShf/t/97vjABEcTHE1wNMHRBEeT1lprrYmjjwMTHE1wNMHRBEcT
+        HE1wNMHRBEcTHE1wNMHRBEcTHE1wNMHRBMcpRTdTim424Til6GZK0c0mHKcU3UwputmE45SimylFN5tw
+        nFJ0M6XoZhOOU4puphTdbMJxStHNlKKbTThOKbqZUnSzCUcTHE1wNMHRBEcTHE2+f03TA4PX8f1l3PjH
+        +P3yj6O11lpryq7rD7Mtc59bb0b3AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripBtnRestartGpg.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnRestartGpg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnRestartGpg.Text" xml:space="preserve">
+    <value>Restart gpg-agent</value>
+  </data>
+  <data name="toolStripSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStripSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>686, 25</value>
+  </data>
+  <data name="toolStripSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;toolStripSearch.Name" xml:space="preserve">
+    <value>toolStripSearch</value>
+  </data>
+  <data name="&gt;&gt;toolStripSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStripSearch.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="TextDelay.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1029, 17</value>
@@ -13060,6 +13079,12 @@
   </data>
   <data name="&gt;&gt;TextDelay.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnRestartGpg.Name" xml:space="preserve">
+    <value>toolStripBtnRestartGpg</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnRestartGpg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMain</value>

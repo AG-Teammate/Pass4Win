@@ -122,7 +122,7 @@ namespace Pass4Win
                 log.Debug("Using the internal git executable");
                 GitRepo = new GitHandling(_config["PassDirectory"], _config["GitRemote"]);
             }
-                
+
             //checking git status
             if (_config["UseGitRemote"] == true || _config["ExternalGit"])
             {
@@ -454,13 +454,13 @@ namespace Pass4Win
             }
         }
 
-    /// <summary>
-    ///     Encrypt the git password
-    /// </summary>
-    /// <param name="password"></param>
-    /// <param name="salt"></param>
-    /// <returns></returns>
-    public static string EncryptConfig(string password, string salt)
+        /// <summary>
+        ///     Encrypt the git password
+        /// </summary>
+        /// <param name="password"></param>
+        /// <param name="salt"></param>
+        /// <returns></returns>
+        public static string EncryptConfig(string password, string salt)
         {
             var passwordBytes = Encoding.Unicode.GetBytes(password);
             var saltBytes = Encoding.Unicode.GetBytes(salt);
@@ -511,14 +511,14 @@ namespace Pass4Win
         private void RenameToolStripMenuItemClick(object sender, EventArgs e)
         {
             var newFileDialog = new SaveFileDialog
-                                    {
-                                        AddExtension = true,
-                                        AutoUpgradeEnabled = true,
-                                        CreatePrompt = false,
-                                        DefaultExt = "gpg",
-                                        InitialDirectory = _config["PassDirectory"],
-                                        Title = Strings.FrmMain_RenameToolStripMenuItemClick_Rename
-                                    };
+            {
+                AddExtension = true,
+                AutoUpgradeEnabled = true,
+                CreatePrompt = false,
+                DefaultExt = "gpg",
+                InitialDirectory = _config["PassDirectory"],
+                Title = Strings.FrmMain_RenameToolStripMenuItemClick_Rename
+            };
             if (newFileDialog.ShowDialog() == DialogResult.Cancel)
             {
                 return;
@@ -848,14 +848,14 @@ namespace Pass4Win
         private void ToolStripbtnAddClick(object sender, EventArgs e)
         {
             var newFileDialog = new SaveFileDialog
-                                    {
-                                        AddExtension = true,
-                                        AutoUpgradeEnabled = true,
-                                        CreatePrompt = false,
-                                        DefaultExt = "gpg",
-                                        InitialDirectory = _config["PassDirectory"],
-                                        Title = Strings.Info_add_dialog
-                                    };
+            {
+                AddExtension = true,
+                AutoUpgradeEnabled = true,
+                CreatePrompt = false,
+                DefaultExt = "gpg",
+                InitialDirectory = _config["PassDirectory"],
+                Title = Strings.Info_add_dialog
+            };
             if (newFileDialog.ShowDialog() == DialogResult.Cancel)
             {
                 return;
@@ -1003,6 +1003,58 @@ namespace Pass4Win
             info.UseShellExecute = true;
             info.Verb = "runas";
             Process.Start(info);
+        }
+
+        private void ToolStripbtnOpenUrlClick(object sender, EventArgs e)
+        {
+            string urlPrefix = "url:"; //TODO: should not be hardcoded
+            string loginPrefix = "login:"; //TODO: should not be hardcoded
+            if (!string.IsNullOrWhiteSpace(txtPassDetail.Text))
+            {
+                String password = null;
+                String url = null;
+                String login = null;
+
+                var options = txtPassDetail.Text.Split(new char[] { '\n' }, StringSplitOptions.None);
+                if (options.Any(o => o.StartsWith(urlPrefix)))
+                {
+                    if (!string.IsNullOrWhiteSpace(options[0])) password = options[0].Trim();
+
+                    url = options.FirstOrDefault(o => o.StartsWith(urlPrefix));
+                    if (!string.IsNullOrWhiteSpace(url))
+                    {
+                        url = url.Substring(urlPrefix.Length);
+                    }
+
+                    login = options.FirstOrDefault(o => o.StartsWith(loginPrefix));
+                    if (!string.IsNullOrWhiteSpace(login))
+                    {
+                        login = login.Substring(loginPrefix.Length);
+                    }
+
+                    var uri = new Uri(url);
+                    if (!string.IsNullOrWhiteSpace(uri.Scheme))
+                    {
+                        if (uri.Scheme.ToLowerInvariant().StartsWith("http"))
+                        {
+                            Process.Start(url);
+                        }
+                        else if (uri.Scheme.ToLowerInvariant() == "rdp")
+                        {
+                            Process.Start("cmd.exe", string.Format(" /c \"cmdkey /generic:TERMSRV/{0} /user:{1} /pass:{2} && mstsc /v:{0} && timeout /t 1 /nobreak && cmdkey /delete:TERMSRV/{0}\"",
+                                uri.Host, login, password));
+                        }
+                        else
+                        {
+                            MessageBox.Show(uri.Scheme + " not implemented!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No URI Scheme!");
+                    }
+                }
+            }
         }
     }
 }

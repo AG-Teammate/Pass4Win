@@ -6671,6 +6671,29 @@
   <data name="toolStripBtnRestartGpg.Text" xml:space="preserve">
     <value>Restart gpg-agent</value>
   </data>
+  <data name="toolStripBtnOpenUrl.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGzSURBVHhe5ZTZbgIxEAT59Pw5YSI5apYKrLNz+CipHmgJ
+        290S3B7cL3qVr4d0bpYY9uhB5QgY9uhF1QgY9uhJxQgY9uhN9ggY9hhB5ggY9hhF1ggY9hhJxggYqtVE
+        j4ChOgKRI2CojkLUCBiqIxExAobqSGw9wNY/ga3/BCPLmxiqlUSXNzFUq8gob2KoVpBV3sRQzSazvImh
+        msnV8vb93jMwVLPwKN/oOQtDNQPP8o2zZ2KoRhNRvnHmbAzVSCLLNz7dgaEaRUb5xru7MFQjyCzf+OtO
+        DFVvKso36O6X4KgnleUbxzc8fSC9GKF8Q9/ydAnpwUjlG+1NL5cdvcqI5Rs/Z9Ol6lWuDBBZ/he6WPXg
+        PyOklDfoctWLnhHSyhv0ANWTMyOkljfoEao370ZIL2/QQ9QIaISS8sbxIUej0BHKyhtalozEipeWN6i0
+        ujxUWl0eKq0uD5VWl4dKq8tDpdXlodLq8lBpdXmotDo71EnFUJ0d6qRiqM4OdVIxVGeHOqkYqrNDnVQM
+        1dmhTiqG6uxQJxVDdXaok4rhTmK4kxjuJIY7ieFOYriTGO4khpt4u38DbNd5DvI5hSgAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="toolStripBtnOpenUrl.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnOpenUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnOpenUrl.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
   <data name="toolStripSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -13074,16 +13097,22 @@
   <data name="&gt;&gt;toolStripUpdateButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripBtnRestartGpg.Name" xml:space="preserve">
+    <value>toolStripBtnRestartGpg</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnRestartGpg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;TextDelay.Name" xml:space="preserve">
     <value>TextDelay</value>
   </data>
   <data name="&gt;&gt;TextDelay.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripBtnRestartGpg.Name" xml:space="preserve">
-    <value>toolStripBtnRestartGpg</value>
+  <data name="&gt;&gt;toolStripBtnOpenUrl.Name" xml:space="preserve">
+    <value>toolStripBtnOpenUrl</value>
   </data>
-  <data name="&gt;&gt;toolStripBtnRestartGpg.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripBtnOpenUrl.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
